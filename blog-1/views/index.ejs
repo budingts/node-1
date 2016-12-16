@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style media="screen">
+      .card_box{
+        float:left;
+        border:1px solid black;
+        margin-right:10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <a href="/post">发文</a>
+    <div class="">
+      <% posts.map((post,i)=>{ %>
+        <div class="card_box">
+          <p>
+            <%= post.title %>
+          </p>
+          <p>
+            <%= post.content %>
+          </p>
+        </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
